@@ -9,6 +9,7 @@ Source0:	http://exchange.nagios.org/components/com_mtree/attachment.php?link_id=
 # Source0-md5:	238f7b64955a7cb070b8a9379dbf57bb
 Source1:	%{plugin}.cfg
 URL:		http://exchange.nagios.org/directory/Plugins/Security/VPN-Software/check_openvpn/details
+BuildRequires:	rpm-pythonprov
 Requires:	nagios-common
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
