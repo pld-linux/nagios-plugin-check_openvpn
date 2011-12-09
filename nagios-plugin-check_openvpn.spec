@@ -2,8 +2,8 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Nagios plugin to check OpenVPN server status
 Name:		nagios-plugin-%{plugin}
-Version:	0.1
-Release:	2
+Version:	1.0
+Release:	1
 License:	GPL v2
 Group:		Networking
 Source0:	http://exchange.nagios.org/components/com_mtree/attachment.php?link_id=1459&cf_id=24/check_openvpn.pl
@@ -27,7 +27,10 @@ clients.
 
 %prep
 %setup -qcT
-%{__sed} -e '/diagnostics/d' %{SOURCE0} > %{plugin}
+%{__sed} -e '
+	/diagnostics/d
+	s#/usr/nagios/libexec#%{plugindir}#
+' %{SOURCE0} > %{plugin}
 
 %install
 rm -rf $RPM_BUILD_ROOT
