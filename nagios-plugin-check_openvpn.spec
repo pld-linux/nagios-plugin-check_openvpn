@@ -1,5 +1,4 @@
 %define		plugin	check_openvpn
-%include	/usr/lib/rpm/macros.perl
 Summary:	Nagios plugin to check OpenVPN server status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
