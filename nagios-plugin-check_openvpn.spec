@@ -2,7 +2,7 @@
 Summary:	Nagios plugin to check OpenVPN server status
 Name:		nagios-plugin-%{plugin}
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Networking
 Source0:	http://exchange.nagios.org/components/com_mtree/attachment.php?link_id=1459&cf_id=24/check_openvpn.pl
@@ -14,7 +14,7 @@ Requires:	nagios-common
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	perl(utils)
+%define		_noautoreq_perl		utils
 
 %define		_sysconfdir	/etc/nagios/plugins
 %define		plugindir	%{_prefix}/lib/nagios/plugins
